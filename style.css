@@ -243,23 +243,24 @@ button {
 }
 
 .explore-btn {
-  background: #2563eb;
-  color: #fff;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
+  background: #73C7C7;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(115, 199, 199, 0.3);
   transition: all 0.3s ease;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
 }
 
 .explore-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
-  background: #1d4ed8;
+  box-shadow: 0 8px 20px rgba(115, 199, 199, 0.5);
+  background: #5fb5b5;
 }
 
 @keyframes fadeInUp {
