@@ -243,13 +243,13 @@ button {
 }
 
 .explore-btn {
-  background: var(--primary);
+  background: #2563eb;
   color: #fff;
   padding: 1rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.1rem;
-  box-shadow: 0 8px 20px rgba(255, 111, 79, 0.4);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
   transition: all 0.3s ease;
   display: inline-block;
   text-transform: uppercase;
@@ -258,7 +258,8 @@ button {
 
 .explore-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(255, 111, 79, 0.6);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.6);
+  background: #1d4ed8;
 }
 
 @keyframes fadeInUp {
