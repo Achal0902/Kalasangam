@@ -362,6 +362,123 @@ button {
   padding: 4rem 0 5rem;
 }
 
+/* Featured Event Card */
+.event-card-featured {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 2.5rem auto 3rem;
+  max-width: 900px;
+}
+
+.event-card-image {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.event-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-date-badge {
+  background: #9ca3af;
+  color: #1e1e2f;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  gap: 0.5rem;
+}
+
+.date-month {
+  font-size: 1.5rem;
+}
+
+.date-day {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.event-card-content {
+  background: linear-gradient(135deg, rgba(25, 22, 44, 0.9), rgba(25, 22, 44, 0.7)),
+    url("images/kalasangam_bg_card.jpg") center/cover;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.event-card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.event-card-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #d1d5db;
+}
+
+.event-location {
+  font-weight: 500;
+}
+
+.event-explore-btn {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.event-explore-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .event-card-body {
+    flex-direction: row;
+  }
+
+  .event-date-badge {
+    width: 25%;
+  }
+
+  .event-card-content {
+    width: 75%;
+  }
+
+  .date-month {
+    font-size: 2rem;
+  }
+
+  .date-day {
+    font-size: 4rem;
+  }
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;
