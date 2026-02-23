@@ -636,7 +636,7 @@ button {
 }
 
 .location-info {
-  background: var(--surface);
+  background: #e0f2f7;
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
