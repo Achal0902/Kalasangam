@@ -369,10 +369,6 @@ button {
   color: var(--text);
 }
 
-.location-section .section-header-center h2 {
-  color: #1a4d63;
-}
-
 .events {
   padding: 4rem 0 5rem;
 }
@@ -617,6 +613,23 @@ button {
   background: #e0f2f7;
 }
 
+.location-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.location-header h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: #1a4d63;
+  margin-bottom: 0.5rem;
+}
+
+.location-header p {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
 .location-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -628,57 +641,62 @@ button {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  height: 500px;
 }
 
 .location-map iframe {
   border-radius: var(--radius);
 }
 
-.location-info {
-  background: #e0f2f7;
-  padding: 2rem;
+.location-info-box {
+  background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  height: 500px;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
-.location-info h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--text);
+.info-item {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(95, 98, 117, 0.15);
 }
 
-.info-block {
-  margin-bottom: 1.8rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(95, 98, 117, 0.2);
-}
-
-.info-block:last-child {
+.info-item:last-child {
   border-bottom: none;
-  margin-bottom: 0;
 }
 
-.info-block h4 {
+.info-item h3 {
   font-size: 1.1rem;
   font-weight: 600;
+  color: var(--text);
   margin-bottom: 0.8rem;
-  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-.info-block p {
+.info-item p {
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 0.5rem;
 }
 
-.info-block p strong {
+.info-item p:last-child {
+  margin-bottom: 0;
+}
+
+.info-item p strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.contact-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: var(--secondary);
 }
 
 @media (max-width: 768px) {
@@ -687,22 +705,19 @@ button {
     gap: 2rem;
   }
 
-  .location-map {
-    order: 2;
-    height: 400px;
+  .location-header h2 {
+    font-size: 1.8rem;
   }
 
-  .location-info {
-    order: 1;
-    height: auto;
-    overflow-y: visible;
+  .location-header p {
+    font-size: 1rem;
   }
 
-  .location-info h3 {
-    font-size: 1.3rem;
+  .info-item {
+    padding: 1.2rem;
   }
 
-  .info-block h4 {
+  .info-item h3 {
     font-size: 1rem;
   }
 }
