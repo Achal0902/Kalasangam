@@ -206,6 +206,23 @@ const observeAnimations = () => {
   );
 
   items.forEach((item) => observer.observe(item));
+
+  // Observe featured event card for slide-in animation
+  const featuredCard = document.querySelector(".event-card-featured");
+  if (featuredCard) {
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    cardObserver.observe(featuredCard);
+  }
 };
 
 const toggleMenu = () => {
