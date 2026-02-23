@@ -369,6 +369,10 @@ button {
   color: var(--text);
 }
 
+.location-section .section-header-center h2 {
+  color: #1a4d63;
+}
+
 .events {
   padding: 4rem 0 5rem;
 }
@@ -610,7 +614,7 @@ button {
 /* Location Section */
 .location-section {
   padding: 4rem 0 5rem;
-  background: var(--surface);
+  background: #e0f2f7;
 }
 
 .location-content {
@@ -618,14 +622,13 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-top: 2rem;
-  align-items: start;
 }
 
 .location-map {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  height: fit-content;
+  height: 500px;
 }
 
 .location-map iframe {
@@ -637,6 +640,8 @@ button {
   padding: 2rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  height: 500px;
+  overflow-y: auto;
 }
 
 .location-info h3 {
@@ -684,10 +689,13 @@ button {
 
   .location-map {
     order: 2;
+    height: 400px;
   }
 
   .location-info {
     order: 1;
+    height: auto;
+    overflow-y: visible;
   }
 
   .location-info h3 {
