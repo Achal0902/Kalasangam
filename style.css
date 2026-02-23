@@ -373,6 +373,14 @@ button {
   padding: 4rem 0 5rem;
 }
 
+.events-list-section {
+  padding: 2rem 0 5rem;
+}
+
+.events-list-section .container {
+  max-width: 1140px;
+}
+
 /* Featured Event Card */
 .event-card-featured {
   background: var(--surface);
