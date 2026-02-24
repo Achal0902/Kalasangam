@@ -22,7 +22,7 @@
         <a href="index.html#home" class="nav-link">Home</a>
         <a href="index.html#about" class="nav-link">About</a>
         <a href="index.html#our-events" class="nav-link">Event</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="#footer" class="nav-link">Contact</a>
         <a href="index.html#schedule" class="nav-link">Schedule</a>
       </nav>
       <div class="nav-actions">
@@ -41,8 +41,18 @@
   <main class="rulebook">
     <section class="page-hero">
       <div class="container fade-in">
-        <h1>Kalasangam 2K26 Rule Book</h1>
-        <p>Read each guideline carefully. Colleges must ensure compliance for fair play.</p>
+        <div class="hero-header-with-toggle">
+          <div>
+            <h1 class="lang-text" data-lang="en">Kalasangam 2K26 Rule Book</h1>
+            <h1 class="lang-text" data-lang="mr" style="display: none;">कलासंगम २०२६ नियमावली</h1>
+            <p class="lang-text" data-lang="en">Read each guideline carefully. Colleges must ensure compliance for fair play.</p>
+            <p class="lang-text" data-lang="mr" style="display: none;">प्रत्येक मार्गदर्शन काळजीपूर्वक वाचा. महाविद्यालयांनी न्याय्य खेळ सुनिश्चित करणे आवश्यक आहे.</p>
+          </div>
+          <div class="language-toggle">
+            <button class="lang-btn active" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="mr">मराठी</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -80,180 +90,474 @@
     <section class="rules-section">
       <div class="container">
         <div class="section-header fade-in">
-          <h2>Category-wise Rules</h2>
-          <p>Tap on a category to expand the event rules.</p>
+          <h2 class="lang-text" data-lang="en">Category-wise Rules</h2>
+          <h2 class="lang-text" data-lang="mr" style="display: none;">वर्गवार नियम</h2>
+          <p class="lang-text" data-lang="en">Select your event category to view detailed rules below</p>
+          <p class="lang-text" data-lang="mr" style="display: none;">तपशीलवार नियम पाहण्यासाठी आपल्या इव्हेंट श्रेणी निवडा</p>
         </div>
-        <div class="accordion" id="rulebookAccordion">
-          <div class="accordion-item fade-in" id="literary">
-            <button class="accordion-header" type="button">
-              Literary Events
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="poetry">
-                  <h3>Poetry (कविता वाचन)</h3>
-                  <ol>
-                    <li>Time limit: 3 minutes per participant.</li>
-                    <li>Original composition only. No published poems.</li>
-                    <li>Language: Marathi, Hindi, or English.</li>
-                    <li>सादरीकरणात पारंपरिक किंवा आधुनिक शैली चालेल.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="elocution">
-                  <h3>Elocution (भाषण)</h3>
-                  <ol>
-                    <li>Time limit: 4 minutes.</li>
-                    <li>Topic will be provided on the spot.</li>
-                    <li>Use of notes is allowed for reference only.</li>
-                    <li>स्पष्ट उच्चार व विचारांची मांडणी अपेक्षित.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="debate">
-                  <h3>Debate (वादविवाद)</h3>
-                  <ol>
-                    <li>Team of 2 members, one for and one against the motion.</li>
-                    <li>Time limit: 3 minutes per speaker.</li>
-                    <li>Rebuttal round: 2 minutes.</li>
-                    <li>सभ्य वादविवाद शैली अनिवार्य.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="essay-writing">
-                  <h3>Essay Writing (निबंध लेखन)</h3>
-                  <ol>
-                    <li>Time limit: 60 minutes.</li>
-                    <li>Word limit: 700 words.</li>
-                    <li>Participants must bring their own writing materials.</li>
-                    <li>हस्ताक्षर व शब्दलेखन तपासले जाईल.</li>
-                  </ol>
-                </div>
+
+        <div class="category-filter fade-in">
+          <button class="filter-btn active" data-category="all">All Events</button>
+          <button class="filter-btn" data-category="literary">Literary</button>
+          <button class="filter-btn" data-category="music">Music</button>
+          <button class="filter-btn" data-category="dance">Dance</button>
+          <button class="filter-btn" data-category="theatre">Theatre</button>
+          <button class="filter-btn" data-category="fine-arts">Fine Arts</button>
+        </div>
+
+        <!-- LITERARY EVENTS -->
+        <div class="event-rules fade-in" data-category="literary">
+          <h3 class="lang-text" data-lang="en">📚 Literary Events</h3>
+          <h3 class="lang-text" data-lang="mr" style="display: none;">📚 साहित्य कार्यक्रम</h3>
+
+          <!-- Poetry -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(a) Poetry (Self-Written)</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Each participant will be given a maximum of four (4) minutes for presentation.</li>
+                  <li>The poem must be in Marathi, Hindi, or English.</li>
+                  <li>Each participant may present only one poem for the competition.</li>
+                  <li>If a poem is found to be copyrighted, taken from social media, or generated using AI, the concerned participant will be disqualified from the competition.</li>
+                  <li>The poem presented must be self-composed (original). If a participant presents another poet's work, they will be declared ineligible.</li>
+                  <li>If the poem contains obscenity or content that hurts sentiments related to caste, gender, race, color, religion, or politics, the entry will be disqualified.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(अ) कविता (स्वरचित)</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक स्पर्धकास सादरीकरणासाठी कमाल ०४ (चार) मिनिटे दिली जातील.</li>
+                  <li>कविता मराठी, हिंदी किंवा इंग्रजी भाषेत असणे आवश्यक आहे.</li>
+                  <li>प्रत्येक स्पर्धक स्पर्धेसाठी केवळ एक कविता सादर करू शकतो.</li>
+                  <li>कविता कॉपीराइट केलेली, सोशल मीडियावरील किंवा AI द्वारे तयार केलेली आढळल्यास संबंधित स्पर्धक स्पर्धेतून अयोग्य ठरवले जातील.</li>
+                  <li>सादरीकरण केलेली कविता स्वरचित असणे आवश्यक आहे. दुसऱ्या कवीची कविता सादर केल्यास स्पर्धक अयोग्य ठरवले जातील.</li>
+                  <li>कवितेत अश्लीलता किंवा जात, लिंग, वंश, रंग, धर्म किंवा राजकीय भावनांचा अपमान करणारी सामग्री असल्यास प्रवेशिका नाकारली जाईल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item fade-in" id="music">
-            <button class="accordion-header" type="button">
-              Music
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="solo-singing">
-                  <h3>Singing (Solo &amp; Group)</h3>
-                  <ol>
-                    <li>Solo time limit: 3 minutes. Group time limit: 5 minutes.</li>
-                    <li>Karaoke or instrumental tracks are allowed.</li>
-                    <li>Participants must submit tracks 1 hour prior.</li>
-                    <li>अश्लील गाणी किंवा शब्द निषिद्ध.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="instrumental-music">
-                  <h3>Instrumental Music (वाद्य संगीत)</h3>
-                  <ol>
-                    <li>Time limit: 4 minutes.</li>
-                    <li>Only acoustic/electric instruments are allowed.</li>
-                    <li>Participants must bring their own instruments.</li>
-                    <li>साउंड चेकसाठी 10 मिनिटे दिली जातील.</li>
-                  </ol>
-                </div>
+          <!-- Elocution -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(b) Elocution Competition</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>The speech must be delivered in Marathi, Hindi, or English.</li>
+                  <li>Each speaker will be given a minimum of four (4) minutes and a maximum of five (5) minutes for presentation.</li>
+                  <li>The topics for the elocution competition will be provided at the time of registration.</li>
+                  <li>The presentation must be strictly in prose form. The use of poetry or songs is not permitted.</li>
+                  <li>Reading from paper or any written material is strictly prohibited.</li>
+                  <li>The judges decision will be based on subject knowledge, depth of study, presentation style, language usage, and overall performance.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(ब) भाषण स्पर्धा</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>भाषण मराठी, हिंदी किंवा इंग्रजी भाषेत दिला पाहिजे.</li>
+                  <li>प्रत्येक वक्त्याला सादरीकरणासाठी किमान ०४ (चार) मिनिटे व कमाल ०५ (पाच) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>भाषण स्पर्धेचे विषय नोंदणीच्या वेळी दिले जातील.</li>
+                  <li>सादरीकरण हे कडक गद्य स्वरूपात असावे. कविता किंवा गीतांचा वापर अनुमत नाही.</li>
+                  <li>कागदपत्रे किंवा लिखित सामग्रीतून वाचन करणे कठोरपणे प्रतिबंधित आहे.</li>
+                  <li>निर्णय विषयाची ओळख, ज्ञानाची खोली, सादरीकरणाची शैली, भाषेचा वापर व एकूण कामगिरीवर आधारित असेल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item fade-in" id="dance">
-            <button class="accordion-header" type="button">
-              Dance
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="solo-dance">
-                  <h3>Solo Dance (एकल नृत्य)</h3>
-                  <ol>
-                    <li>Time limit: 3 minutes.</li>
-                    <li>Props allowed with prior approval.</li>
-                    <li>Explicit content is prohibited.</li>
-                    <li>पोशाख सुसंस्कृत व सुसंगत असावा.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="group-dance">
-                  <h3>Group Dance (समूह नृत्य)</h3>
-                  <ol>
-                    <li>Team size: up to 6 members.</li>
-                    <li>Time limit: 6 minutes.</li>
-                    <li>Tracks must be submitted 2 hours prior.</li>
-                    <li>समन्वय व सादरीकरणातील शिस्त अपेक्षित.</li>
-                  </ol>
-                </div>
+          <!-- Debate -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(c) Debate Competition</h4>
+                <ol>
+                  <li>A maximum of two (02) teams from each college may participate in this competition.</li>
+                  <li>Each team must consist of two (2) participants.</li>
+                  <li>The debate topics will be announced at the time of on-the-spot registration.</li>
+                  <li>The first speaker will speak in favor of the topic, and the second speaker will speak against the topic.</li>
+                  <li>Participants may present in Marathi, Hindi, or English. Both participants may use the same or different languages.</li>
+                  <li>Each participant will be given a minimum of three (3) minutes and a maximum of four (4) minutes.</li>
+                  <li>Personal criticism, abusive language, disrespectful remarks, and interruption are strictly prohibited.</li>
+                  <li>If any participant uses offensive words regarding religion, caste, language, or gender, the participant will be disqualified.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(क) वादविवाद स्पर्धा</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त २ (दोन) संघ या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक संघामध्ये २ (दोन) स्पर्धक असणे आवश्यक आहे.</li>
+                  <li>वादविवादाचे विषय नोंदणीच्या वेळी घोषित केले जातील.</li>
+                  <li>पहिला वक्ता विषयाच्या पक्षात व दुसरा विरोधात बोलेल.</li>
+                  <li>स्पर्धक मराठी, हिंदी किंवा इंग्रजी भाषेत सादरीकरण करू शकतात.</li>
+                  <li>प्रत्येक स्पर्धकास किमान ३ (तीन) मिनिटे व कमाल ४ (चार) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>वैयक्तिक टीका, अपशब्द, अवमानकारक भाषा व व्यत्यय कठोरपणे प्रतिबंधित आहे.</li>
+                  <li>धर्म, जात, भाषा किंवा लिंग यांविषयी अपमानास्पद शब्द वापरल्यास स्पर्धक अयोग्य ठरवले जातील.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item fade-in" id="theatre">
-            <button class="accordion-header" type="button">
-              Theatre
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="mimicry">
-                  <h3>Mimicry (नकल कला)</h3>
-                  <ol>
-                    <li>Time limit: 4 minutes.</li>
-                    <li>Content should be family-friendly.</li>
-                    <li>Participants may include short scripts.</li>
-                    <li>हास्यपूर्ण परंतु सन्मानजनक सादरीकरण अपेक्षित.</li>
-                  </ol>
-                </div>
+          <!-- Essay Writing -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(d) Essay Writing</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>The duration of the competition will be two (2) hours.</li>
+                  <li>The topic for essay writing will be announced just before the commencement of the competition.</li>
+                  <li>The essay must be written in Marathi, Hindi, or English.</li>
+                  <li>Clarity of thought, logical presentation, and effective expression will be considered important criteria.</li>
+                  <li>Controversial or offensive views will not be permitted in the essay.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(ड) निबंध लेखन</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>स्पर्धेचा कालावधी २ (दोन) तास असेल.</li>
+                  <li>निबंध लेखनाचा विषय स्पर्धा सुरू होण्याच्या अगदी आधी घोषित केला जाईल.</li>
+                  <li>निबंध मराठी, हिंदी किंवा इंग्रजी भाषेत लिहिला पाहिजे.</li>
+                  <li>विचारांची स्पष्टता, तार्किक मांडणी व प्रभावी अभिव्यक्ती महत्त्वाचे मानले जातील.</li>
+                  <li>विवादास्पद किंवा अपमानास्पद विचार निबंधात परवानगी नाहीत.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MUSIC EVENTS -->
+        <div class="event-rules fade-in" data-category="music">
+          <h3 class="lang-text" data-lang="en">🎵 Music Events</h3>
+          <h3 class="lang-text" data-lang="mr" style="display: none;">🎵 संगीत कार्यक्रम</h3>
+
+          <!-- Solo Singing -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(a) Solo Singing</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Each participant will be given a minimum of four (4) minutes and a maximum of six (6) minutes for performance.</li>
+                  <li>A maximum of three (3) minutes will be provided for stage and instrument setup.</li>
+                  <li>A maximum of two (2) accompanists are allowed for solo singing.</li>
+                  <li>Recorded music (track) is permitted for the performance.</li>
+                  <li>Participants may perform film songs, Western songs, folk songs, ghazals, bhajans, or abhangs.</li>
+                  <li>The judges' decision will be based on pitch, rhythm, composition, and overall impact of the performance.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(अ) एकल गायन</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक स्पर्धकास सादरीकरणासाठी किमान ०४ (चार) व कमाल ०६ (सहा) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>मंच व वाद्यांची व्यवस्था करण्यासाठी कमाल ०३ (तीन) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>एकल गायनासाठी कमाल २ (दोन) साथीदार परवानगीसह आहेत.</li>
+                  <li>रेकॉर्ड केलेला संगीत (ट्रॅक) सादरीकरणाच्या अनुमतीसह आहे.</li>
+                  <li>स्पर्धक चित्रपट गाणी, पाश्चिमात्य गाणी, लोकगीते, गজले, भजन किंवा अभंग सादर करू शकतात.</li>
+                  <li>निर्णय पिच, लय, रचना व सादरीकरणाच्या एकूण प्रभावावर आधारित असेल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item fade-in" id="fine-arts">
-            <button class="accordion-header" type="button">
-              Fine Arts
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="rangoli">
-                  <h3>Rangoli (रंगोली)</h3>
-                  <ol>
-                    <li>Time limit: 90 minutes.</li>
-                    <li>Only dry material should be used.</li>
-                    <li>Theme will be announced on spot.</li>
-                    <li>साफसफाईबाबत काळजी घ्यावी.</li>
-                  </ol>
-                </div>
-                <div class="event-rule" id="on-the-spot-painting">
-                  <h3>On the Spot Painting (तात्काळ चित्रकला)</h3>
-                  <ol>
-                    <li>Time limit: 90 minutes.</li>
-                    <li>Participants must bring their own colors and brushes.</li>
-                    <li>Sheet will be provided by organizers.</li>
-                    <li>थीम दिल्यानंतरच चित्र सुरू करावे.</li>
-                  </ol>
-                </div>
+          <!-- Group Singing -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(b) Group Singing</h4>
+                <ol>
+                  <li>Only one team from each college may participate in this category.</li>
+                  <li>A group may consist of a maximum of six (6) participants.</li>
+                  <li>The performance time will be a minimum of four (4) minutes and a maximum of six (6) minutes.</li>
+                  <li>A maximum of three (3) minutes will be provided for stage and instrument setup.</li>
+                  <li>Recorded music (track) is permitted for the performance.</li>
+                  <li>A maximum of three (3) accompanists are allowed for group singing.</li>
+                  <li>Participants may perform film songs, Western songs, folk songs, ghazals, bhajans, or abhangs.</li>
+                  <li>The judges' decision will be based on pitch, rhythm, composition, and overall impact of the performance.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(ब) समूह गायन</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून केवळ एक संघ या श्रेणीत सहभागी होऊ शकतो.</li>
+                  <li>समूहामध्ये कमाल ०६ (सहा) सदस्य असू शकतात.</li>
+                  <li>सादरीकरणाचा वेळ किमान ०४ (चार) व कमाल ०६ (सहा) मिनिटांचा असेल.</li>
+                  <li>मंच व वाद्यांची व्यवस्था करण्यासाठी कमाल ०३ (तीन) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>रेकॉर्ड केलेला संगीत (ट्रॅक) परवानगीसह आहे.</li>
+                  <li>समूह गायनासाठी कमाल ३ (तीन) साथीदार परवानगीसह आहेत.</li>
+                  <li>स्पर्धक चित्रपट गाणी, पाश्चिमात्य गाणी, लोकगीते, गजले, भजन किंवा अभंग सादर करू शकतात.</li>
+                  <li>निर्णय पिच, लय, रचना व सादरीकरणाच्या एकूण प्रभावावर आधारित असेल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item fade-in" id="spot-photography">
-            <button class="accordion-header" type="button">
-              Spot Photography
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-panel">
-              <div class="accordion-content">
-                <div class="event-rule" id="spot-photography-event">
-                  <h3>Spot Photography (स्पॉट फोटोग्राफी)</h3>
-                  <ol>
-                    <li>Time limit: 90 minutes.</li>
-                    <li>Theme will be given on the spot.</li>
-                    <li>Only basic edits like crop and brightness allowed.</li>
-                    <li>डिजिटल कॅमेरासाठी स्वतःची मेमरी कार्ड आवश्यक.</li>
-                  </ol>
-                </div>
+          <!-- Instrumental Music -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(c) Instrumental Music</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Participants may perform using Indian (Hindustani), Carnatic, Maharashtrian, Western, or any other style.</li>
+                  <li>Each participant will be given a minimum of five (5) minutes and a maximum of seven (7) minutes for performance.</li>
+                  <li>A maximum of three (3) minutes will be provided for stage and instrument setup.</li>
+                  <li>A maximum of one (1) accompanist is permitted for the performance.</li>
+                  <li>Participants must bring their own instruments for the performance.</li>
+                  <li>The judges' decision will be based on rhythm, selection of raga, composition, and overall impact of the performance.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(क) वाद्य संगीत</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>स्पर्धक भारतीय (हिंदुस्थानी), कर्नाटकी, महाराष्ट्रीयन, पाश्चिमात्य किंवा इतर कोणतीही शैली सादर करू शकतात.</li>
+                  <li>प्रत्येक स्पर्धकास सादरीकरणासाठी किमान ०५ (पाच) व कमाल ०७ (सात) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>मंच व वाद्यांची व्यवस्था करण्यासाठी कमाल ०३ (तीन) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>सादरीकरणासाठी कमाल १ (एक) साथीदार परवानगीसह आहे.</li>
+                  <li>स्पर्धकांनी सादरीकरणाच्या लिए स्वतःचे वाद्य आणणे आवश्यक आहे.</li>
+                  <li>निर्णय ताल, राग निवड, रचना व सादरीकरणाच्या एकूण प्रभावावर आधारित असेल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DANCE EVENTS -->
+        <div class="event-rules fade-in" data-category="dance">
+          <h3 class="lang-text" data-lang="en">💃 Dance Events</h3>
+          <h3 class="lang-text" data-lang="mr" style="display: none;">💃 नृत्य कार्यक्रम</h3>
+
+          <!-- Solo Dance -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>Solo Dance</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Participants may perform Classical, Semi-Classical, or Folk dance forms in this category.</li>
+                  <li>The performance duration shall be a minimum of four (4) minutes and a maximum of six (6) minutes.</li>
+                  <li>A maximum of three (3) minutes will be provided for setting up instruments or stage materials.</li>
+                  <li>Recorded music (track) is permitted for the performance.</li>
+                  <li>Both non-film songs and film songs (along with their music) may be used for the performance.</li>
+                  <li>The responsibility of removing stage decorations and materials used during the performance lies solely with the participant.</li>
+                  <li>A maximum of three (3) accompanists may be allowed in this category.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>एकल नृत्य</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>स्पर्धक शास्त्रीय, अर्धशास्त्रीय किंवा लोकनृत्य रूपे सादर करू शकतात.</li>
+                  <li>सादरीकरणाचा कालावधी किमान ०४ (चार) व कमाल ०६ (सहा) मिनिटांचा असेल.</li>
+                  <li>वाद्य किंवा मंचीय सामग्री सजविण्यासाठी कमाल ०३ (तीन) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>रेकॉर्ड केलेला संगीत (ट्रॅक) सादरीकरणाच्या अनुमतीसह आहे.</li>
+                  <li>गैर-चित्रपट व चित्रपट गाणी दोन्ही वापरली जाऊ शकतात.</li>
+                  <li>सादरीकरणादरम्यान वापरलेल्या मंच सजावटीची आणि सामग्रीची हटविण्याची जबाबदारी स्पर्धकावर असेल.</li>
+                  <li>या श्रेणीमध्ये कमाल ३ (तीन) साथीदार परवानगीसह असू शकतात.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Group Dance -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>Group Dance Competition</h4>
+                <ol>
+                  <li>Only one team from each college may participate in this category.</li>
+                  <li>A group may consist of a maximum of six (6) participants.</li>
+                  <li>Participants may perform Classical, Semi-Classical, or Folk dance forms.</li>
+                  <li>Both non-film songs and film songs (along with their music) may be used for the performance.</li>
+                  <li>The performance duration shall be a minimum of five (5) minutes and a maximum of seven (7) minutes.</li>
+                  <li>A maximum of three (3) minutes will be provided for setting up instruments or stage materials.</li>
+                  <li>Recorded music (track) is permitted for the performance.</li>
+                  <li>The responsibility of removing stage decorations and materials used during the performance lies solely with the participants.</li>
+                  <li>A maximum of four (4) accompanists may be allowed for group dance.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>समूह नृत्य स्पर्धा</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून केवळ एक संघ या श्रेणीत सहभागी होऊ शकतो.</li>
+                  <li>समूहामध्ये कमाल ०६ (सहा) सदस्य असू शकतात.</li>
+                  <li>स्पर्धक शास्त्रीय, अर्धशास्त्रीय किंवा लोकनृत्य रूपे सादर करू शकतात.</li>
+                  <li>गैर-चित्रपट व चित्रपट गाणी दोन्ही वापरली जाऊ शकतात.</li>
+                  <li>सादरीकरणाचा कालावधी किमान ०५ (पाच) व कमाल ०७ (सात) मिनिटांचा असेल.</li>
+                  <li>वाद्य किंवा मंचीय सामग्री सजविण्यासाठी कमाल ०३ (तीन) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>रेकॉर्ड केलेला संगीत (ट्रॅक) परवानगीसह आहे.</li>
+                  <li>मंच सजावटीची आणि सामग्रीची हटविण्याची जबाबदारी स्पर्धकांवर असेल.</li>
+                  <li>समूह नृत्यासाठी कमाल ४ (चार) साथीदार परवानगीसह असू शकतात.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THEATRE EVENTS -->
+        <div class="event-rules fade-in" data-category="theatre">
+          <h3 class="lang-text" data-lang="en">🎭 Theatre Events</h3>
+          <h3 class="lang-text" data-lang="mr" style="display: none;">🎭 नाट्य कार्यक्रम</h3>
+
+          <!-- Mimicry -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>Mimicry</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Each participant will be given a minimum of three (3) minutes and a maximum of five (5) minutes for the performance.</li>
+                  <li>Participants may imitate famous personalities such as artists, political leaders, sports personalities, teachers, social figures, or characters/scenes from daily life.</li>
+                  <li>The performance may be presented in Marathi, Hindi, or English.</li>
+                  <li>The use of obscene content, political propaganda, or material that hurts sentiments is strictly prohibited.</li>
+                  <li>The use of background music, recorded audio, or any electronic devices during the performance is not permitted.</li>
+                  <li>The participant may announce the character being portrayed before the performance.</li>
+                  <li>The judges' decision will be based on voice resemblance, dialogue delivery, presentation style, sense of humor, and overall impact.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>नकल कला</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक स्पर्धकास सादरीकरणासाठी किमान ०३ (तीन) व कमाल ०५ (पाच) मिनिटांचा वेळ दिला जाईल.</li>
+                  <li>स्पर्धक प्रसिद्ध व्यक्ती, कलाकार, राजकीय नेते, खेलाडू, शिक्षक किंवा दैनंदिन जीवनातील पात्रांची नकल करू शकतात.</li>
+                  <li>सादरीकरण मराठी, हिंदी किंवा इंग्रजी भाषेत दिले जाऊ शकते.</li>
+                  <li>अश्लील सामग्री, राजकीय प्रचार किंवा भावनांचा अपमान करणारी सामग्री कठोरपणे प्रतिबंधित आहे.</li>
+                  <li>सादरीकरणादरम्यान पार्श्वसंगीत, रेकॉर्ड केलेली ऑडिओ किंवा कोणत्याही इलेक्ट्रॉनिक साधनांचा वापर अनुमत नाही.</li>
+                  <li>स्पर्धक सादरीकरणाच्या आधी पात्र घोषित करू शकतो.</li>
+                  <li>निर्णय आवाजातील साधर्म्य, संवादोच्चार, सादरीकरण शैली, विनोद आणि एकूण प्रभावावर आधारित असेल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FINE ARTS EVENTS -->
+        <div class="event-rules fade-in" data-category="fine-arts">
+          <h3 class="lang-text" data-lang="en">🎨 Fine Arts Events</h3>
+          <h3 class="lang-text" data-lang="mr" style="display: none;">🎨 ललित कला कार्यक्रम</h3>
+
+          <!-- Spot Painting -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(a) Spot Painting</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Each participant must create an on-the-spot painting at the venue based on the theme provided by the judges/organizers.</li>
+                  <li>The time limit for the competition will be two (2) hours.</li>
+                  <li>The drawing paper required for the competition will be provided by the college/organizers.</li>
+                  <li>The painting may be done using oil colors, watercolors, poster colors, or pastel colors.</li>
+                  <li>Participants must bring their own materials required for painting, such as brushes, colors, pencils, etc.</li>
+                  <li>The evaluation will be based on creativity and expressiveness, appropriate presentation of the theme, coherence, effective use of colors, and overall impact.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(अ) तात्काळ चित्रकला</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक स्पर्धकाने परीक्षकांनी/आयोजकांनी दिलेल्या विषयावर आधारित तात्काळ चित्र काढणे आवश्यक आहे.</li>
+                  <li>स्पर्धेचा कालावधी २ (दोन) तास असेल.</li>
+                  <li>चित्रकलेसाठी आवश्यक असलेली कागद महाविद्यालय/आयोजकांनी दिली जाईल.</li>
+                  <li>चित्र तेलरंग, पाणीरंग, पोस्टर रंग किंवा पेस्टल रंगांत काढता येईल.</li>
+                  <li>स्पर्धकांनी कुंचले, रंग, पेन्सिल इत्यादी स्वतः आणणे आवश्यक आहे.</li>
+                  <li>रचनात्मकता, विषयाची योग्य मांडणी, सुसंगतता, रंगांचा प्रभावी वापर व एकूण प्रभाव यांचे आधारे मूल्यांकन केले जाईल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rangoli -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(b) Rangoli</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Each participant must create the rangoli at the venue based on the theme provided by the judges/organizers.</li>
+                  <li>The time limit for the competition will be two (2) hours and thirty (30) minutes.</li>
+                  <li>The space provided for the rangoli will be 115 cm × 115 cm.</li>
+                  <li>Rangoli powder and colored powder may be used for the artwork.</li>
+                  <li>Participants must bring all necessary materials required for preparing the rangoli.</li>
+                  <li>The evaluation will be based on creativity and expressiveness, appropriate presentation of the theme, design elements used, effective use of colors, and overall impact.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(ब) रांगोळी</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>प्रत्येक स्पर्धकाने परीक्षकांनी/आयोजकांनी दिलेल्या विषयावर आधारित रांगोळी काढणी आवश्यक आहे.</li>
+                  <li>स्पर्धेचा कालावधी २ (दोन) तास ३० (तीस) मिनिटांचा असेल.</li>
+                  <li>रांगोळीसाठी दिलेली जागा ११५ सेमी × ११५ सेमी राहील.</li>
+                  <li>रांगोळीची पाउडर व रंगीत पाउडर वापरता येईल.</li>
+                  <li>स्पर्धकांनी रांगोळी काढण्यासाठी आवश्यक असलेली सर्व सामग्री स्वतः आणली पाहिजे.</li>
+                  <li>रचनात्मकता, विषयाची योग्य मांडणी, डिজाईन घटक, रंगांचा प्रभावी वापर व एकूण प्रभाव यांचे आधारे मूल्यांकन केले जाईल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spot Photography -->
+          <div class="rules-section">
+            <div class="bilingual-content">
+              <div class="rule-text lang-block" data-lang="en">
+                <h4>(c) Spot Photography</h4>
+                <ol>
+                  <li>A maximum of five (05) participants from each college may participate in this competition.</li>
+                  <li>Participants must bring their own digital camera and memory card. The memory card will be formatted by the judges before the competition begins.</li>
+                  <li>The time limit for the competition will be one (1) hour and thirty (30) minutes. The theme will be announced at the start of the competition.</li>
+                  <li>Participants must submit exactly six (06) photographs based on the given theme. All photographs must be captured within the specified competition time.</li>
+                  <li>Photo mixing, alteration, morphing, and the use of Photoshop, Picasa, or any photo-editing software are strictly prohibited.</li>
+                  <li>All photographs must be submitted in JPEG format only.</li>
+                  <li>The organizers reserve the right to use the submitted photographs as required. Additional instructions will be given at the venue.</li>
+                  <li>The evaluation will be based on relevance to the theme, composition, technical quality, and overall impact.</li>
+                  <li>The decision of the judges (panel) shall be final and binding.</li>
+                </ol>
+              </div>
+              <div class="rule-text lang-block" data-lang="mr" style="display: none;">
+                <h4>(क) स्पॉट फोटोग्राफी</h4>
+                <ol>
+                  <li>प्रत्येक महाविद्यालयातून जास्तीत-जास्त ०५ (पाच) स्पर्धक या स्पर्धेत सहभागी होऊ शकतात.</li>
+                  <li>स्पर्धकांनी स्वतःचा डिजिटल कॅमेरा व मेमरी कार्ड आणणे आवश्यक आहे. स्पर्धा सुरू होण्याआधी परीक्षकांनी मेमरी कार्ड फॉर्मेट केले जाईल.</li>
+                  <li>स्पर्धेचा कालावधी १ (एक) तास ३० (तीस) मिनिटांचा राहील. विषय स्पर्धा सुरू होताच घोषित केला जाईल.</li>
+                  <li>स्पर्धकांनी दिलेल्या विषयावर आधारित तंतोतंत ६ (सहा) छायाचित्रे सादर करणे आवश्यक आहे. सर्व छायाचित्रे स्पर्धे निश्चित वेळेतच काढलेली असावीत.</li>
+                  <li>फोटो मिश्रण, बदल, रूपांतर आणि फोटोशॉप, पिकासा किंवा कोणत्याही फोटो-एडिटिंग सॉफ्टवेअरचा वापर कठोरपणे प्रतिबंधित आहे.</li>
+                  <li>सर्व छायाचित्रे केवळ JPEG फॉर्मेटमध्ये सादर करणे आवश्यक आहे.</li>
+                  <li>आयोजकांनी सादर केलेली छायाचित्रे आवश्यकतेनुसार वापरण्याचा अधिकार राखून ठेवतात. अतिरिक्त सूचना स्पर्धा स्थळी दिली जातील.</li>
+                  <li>विषयाशी सुसंगतता, मांडणी, तांत्रिक गुणवत्ता व प्रभाव यांचे आधारे मूल्यांकन केले जाईल.</li>
+                  <li>निर्णय समितीचा (पंचांचा) निर्णय अंतिम आणि बंधनकारक राहील.</li>
+                </ol>
               </div>
             </div>
           </div>
@@ -261,34 +565,73 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="container contact-card fade-in">
-        <div>
-          <h2>Need Clarifications?</h2>
-          <p>Reach the fest committee for any rule-specific queries.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=src@gcoej.ac.in" target="_blank" rel="noopener noreferrer">Email Us</a>
-          <a class="btn ghost" href="index.html#events">Back to Events</a>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>Government College of Engineering Jalgaon</h3>
-        <p>Official cultural fest of the academic year 2026.</p>
+  <footer class="footer-new" id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section footer-main">
+          <h4 class="footer-tagline">"Unleashing Talent, Igniting Passion !"</h4>
+          <h5 class="footer-college">Government College of Engineering, Jalgaon</h5>
+          
+          <div class="footer-contact-info">
+            <p class="contact-header">For any queries, feel free to contact:</p>
+            <p class="contact-item">
+              <strong>General Secretary:</strong> Durgesh Patil -
+              <a href="tel:+918010465887" class="contact-link">+91 8010465887</a>
+            </p>
+            <p class="contact-item">
+              <strong>Cultural Secretary:</strong> Sunetra Badgujar -
+              <a href="tel:+919156345515" class="contact-link">+91 9156345515</a>
+            </p>
+            <p class="contact-item">
+              <strong>Registration Coordinator:</strong> Keshav Bagul -
+              <a href="tel:+917822081156" class="contact-link">+91 7822081156</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-section footer-links-main">
+          <div class="footer-links-section">
+            <span class="footer-section-title">Useful Links</span>
+            <ul class="footer-list">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="index.html#about" class="footer-link">About Us</a></li>
+              <li><a href="events.html" class="footer-link">Events</a></li>
+              <li><a href="index.html#location" class="footer-link">Location</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social-section">
+            <span class="footer-section-title">Social Media</span>
+            <ul class="footer-list">
+              <li>
+                <a href="https://instagram.com/src_gcoej" target="_blank" class="footer-link social-link">
+                  📷 SRC GCOEJ
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/gcoej-media/" target="_blank" class="footer-link social-link">
+                  💼 GCOEJ Media
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/gcoej_shutterbugs_?igsh=NGllNjhydzloNTR5" target="_blank" class="footer-link social-link">
+                  📸 GCOEJ Shutterbugs
+                </a>
+              </li>
+              <li>
+                <a href="#footer" class="footer-link">📧 Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
-      </div>
-      <div>
-        <p><a href="mailto:src@gcoej.ac.in" style="color: inherit; text-decoration: none;">src@gcoej.ac.in</a></p>
-        <p>Copyright 2026</p>
+
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">Copyright © <span id="get-current-year">2026</span> | Developed with ♥️ by PraAach</p>
       </div>
     </div>
   </footer>
@@ -296,5 +639,95 @@
   <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
 
   <script src="script.js"></script>
+  <script>
+    // Language Toggle
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const langTexts = document.querySelectorAll('.lang-text');
+    const langBlocks = document.querySelectorAll('.lang-block');
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        
+        // Update active button
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update text visibility
+        langTexts.forEach(text => {
+          if (text.getAttribute('data-lang') === lang) {
+            text.style.display = 'block';
+          } else {
+            text.style.display = 'none';
+          }
+        });
+
+        // Update rule blocks visibility
+        langBlocks.forEach(block => {
+          if (block.getAttribute('data-lang') === lang) {
+            block.style.display = 'block';
+          } else {
+            block.style.display = 'none';
+          }
+        });
+
+        // Save preference
+        localStorage.setItem('rulebook-lang', lang);
+      });
+    });
+
+    // Restore language preference
+    const savedLang = localStorage.getItem('rulebook-lang') || 'en';
+    const activeBtn = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
+    if (activeBtn) {
+      activeBtn.click();
+    }
+
+    // Category Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const eventRules = document.querySelectorAll('.event-rules');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-category');
+
+        // Update active button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Update visibility
+        eventRules.forEach(rule => {
+          if (category === 'all' || rule.getAttribute('data-category') === category) {
+            rule.style.display = 'block';
+          } else {
+            rule.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Check URL params for event-specific rules
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventId = urlParams.get('event');
+    
+    if (eventId) {
+      // Map event ID to category
+      const eventToCategory = {
+        'literary': 'literary',
+        'music': 'music',
+        'dance': 'dance',
+        'theatre': 'theatre',
+        'fine-arts': 'fine-arts'
+      };
+
+      const category = eventToCategory[eventId];
+      if (category) {
+        const button = document.querySelector(`.filter-btn[data-category="${category}"]`);
+        if (button) {
+          button.click();
+        }
+      }
+    }
+  </script>
 </body>
 </html>

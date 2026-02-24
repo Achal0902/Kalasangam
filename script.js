@@ -1,115 +1,47 @@
 const eventsData = [
   {
     category: "Literary",
-    events: [
-      {
-        name: "Poetry",
-        description: "Express powerful verses with rhythm and emotion.",
-        max: "5 solo",
-        id: "poetry",
-      },
-      {
-        name: "Elocution",
-        description: "Persuasive speaking with clarity and confidence.",
-        max: "5 solo",
-        id: "elocution",
-      },
-      {
-        name: "Debate",
-        description: "Argue your stance with logic and teamwork.",
-        max: "2 teams of 2 members",
-        id: "debate",
-      },
-      {
-        name: "Essay Writing",
-        description: "Craft thoughtful ideas into structured essays.",
-        max: "5 solo",
-        id: "essay-writing",
-      },
-    ],
-  },
-  {
-    category: "Music",
-    events: [
-      {
-        name: "Solo Singing",
-        description: "Solo melodies that capture the stage.",
-        max: "5 solo",
-        id: "solo-singing",
-      },
-      {
-        name: "Group Singing",
-        description: "Harmony, coordination, and musical unity.",
-        max: "1 team max 6 members",
-        id: "solo-singing",
-      },
-      {
-        name: "Instrumental Music",
-        description: "Showcase your instrumental mastery.",
-        max: "5 solo",
-        id: "instrumental-music",
-      },
-    ],
-  },
-  {
-    category: "Dance",
-    events: [
-      {
-        name: "Solo Dance",
-        description: "Graceful moves and high-energy performance.",
-        max: "5 solo",
-        id: "solo-dance",
-      },
-      {
-        name: "Group Dance",
-        description: "Synchronize steps with your crew.",
-        max: "1 team max 6 members",
-        id: "group-dance",
-      },
-    ],
-  },
-  {
-    category: "Fine Arts",
-    events: [
-      {
-        name: "Rangoli",
-        description: "Traditional designs with vibrant creativity.",
-        max: "5 solo",
-        id: "rangoli",
-      },
-      {
-        name: "On the Spot Painting",
-        description: "Paint instantly with imagination and flair.",
-        max: "5 solo",
-        id: "on-the-spot-painting",
-      },
-    ],
+    description: "Express yourself through poetry, debate, elocution, and creative writing.",
+    id: "literary",
+    icon: "📚",
+    bgImage: "poetry.jpeg",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLScA4Gor4h8QChokrcIVUtA6HRkhpzKkZrE8m9n8-zFteXWa0A/viewform?usp=publish-editor"
   },
   {
     category: "Theatre",
-    events: [
-      {
-        name: "Mimicry",
-        description: "Perform impressions with a dramatic twist.",
-        max: "5 solo",
-        id: "mimicry",
-      },
-    ],
+    description: "Perform with dramatics and bring characters to life on stage.",
+    id: "theatre",
+    icon: "🎭",
+    bgImage: "theatre.jpeg",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSdf40A_RgXdhvdjvN66NMHCMI-DSxU0kcK58yQCjCHvwnxcAQ/viewform?usp=publish-editor"
   },
   {
-    category: "Spot Photography",
-    events: [
-      {
-        name: "Spot Photography",
-        description: "Capture the moment with your lens.",
-        max: "5 solo",
-        id: "spot-photography-event",
-      },
-    ],
+    category: "Fine Arts",
+    description: "Create stunning visual art through painting, rangoli, and more.",
+    id: "fine-arts",
+    icon: "🎨",
+    bgImage: "finearts.jpeg",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSesmfCmJDk3QgB7MLjsp1HzKzk80Idk9LlT-EvKRCR595mF4A/viewform?usp=publish-editor"
+  },
+  {
+    category: "Music",
+    description: "Showcase your musical talent with solo and group performances.",
+    id: "music",
+    icon: "🎵",
+    bgImage: "music.jpeg",
+    registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSe6lPKpZK2ME3enbiebhOgmSWmr-Oztgy1ZVoDdqop8qgPxPw/viewform?usp=preview"
+  },
+  {
+    category: "Dance",
+    description: "Embrace the rhythm and express yourself through graceful movements.",
+    id: "dance",
+    icon: "💃",
+    bgImage: "dance.jpeg",
+    registerLink: "https://forms.gle/pCi7BaVxDkc13vR17"
   },
 ];
 
-const registerLink = "https://forms.gle/your-form-link";
+const registerLink = "https://docs.google.com/forms/d/e/1FAIpQLScA4Gor4h8QChokrcIVUtA6HRkhpzKkZrE8m9n8-zFteXWa0A/viewform?usp=publish-editor";
 
 const eventsGrid = document.getElementById("eventsGrid");
 const filtersContainer = document.getElementById("filters");
@@ -138,28 +70,44 @@ const setActiveNav = () => {
   });
 };
 
-const createFilters = () => {
+const createBanner = () => {
   if (!filtersContainer) return;
 
-  const categories = ["All", ...eventsData.map((item) => item.category)];
-  filtersContainer.innerHTML = "";
+  filtersContainer.innerHTML = `
+    <div class="kalasangam-wrapper">
+      <!-- Sponsor Logo -->
+      <div class="sponsor-logo-section">
+        <img src="images/jain_logo_black_outline.png" alt="Sponsor Logo" class="sponsor-logo">
+      </div>
 
-  categories.forEach((category, index) => {
-    const button = document.createElement("button");
-    button.className = "filter-btn";
-    button.textContent = category;
-    if (index === 0) button.classList.add("active");
+      <!-- Main Kalasangam Section -->
+      <div class="events-banner">
+        <!-- Left: Kalasangam Logo/Image -->
+        <div class="banner-image">
+          <img src="images/logo_kala.png" alt="Kalasangam 2025 Logo" class="banner-logo">
+        </div>
 
-    button.addEventListener("click", () => {
-      document
-        .querySelectorAll(".filter-btn")
-        .forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-      renderEvents(category);
-    });
+        <!-- Right: Content -->
+        <div class="banner-content-left">
+          <h2 class="banner-subtitle">A Celebration of Roots, Rhythm, and the Soul of Bharat</h2>
+          
+          <div class="banner-poetry">
+            <p class="poetry-line">In the sacred rhythm of tabla,</p>
+            <p class="poetry-line">In the graceful flow of classical dance,</p>
+            <p class="poetry-line">In the poetry that touches the heart —</p>
+            <p class="poetry-line highlight">lives the true spirit of our culture.</p>
+          </div>
 
-    filtersContainer.appendChild(button);
-  });
+          <p class="banner-description-main">Government College of Engineering, Jalgaon humbly presents <span class="kalasangam-highlight">Kalasangam 2025</span> — not just a fest, but a heartfelt gathering of traditions, emotions, and artistic devotion.</p>
+
+          <div class="banner-event-info">
+            <p class="event-date">📅 March 28, 2025</p>
+            <p class="event-venue">📍 Government College of Engineering, Jalgaon, Maharashtra</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
 };
 
 const renderEvents = (filterCategory = "All") => {
@@ -171,21 +119,22 @@ const renderEvents = (filterCategory = "All") => {
       ? eventsData
       : eventsData.filter((item) => item.category === filterCategory);
 
-  filtered.forEach((group) => {
-    group.events.forEach((event) => {
-      const card = document.createElement("article");
-      card.className = `event-card fade-in event-${event.id}`;
-      card.innerHTML = `
-        <h3>${event.name}</h3>
-        <p>${event.description}</p>
-        <p class="event-meta">Max Participants: ${event.max}</p>
-        <div class="card-actions">
-          <a class="btn primary" href="${registerLink}" target="_blank" rel="noopener">Register</a>
-          <a class="btn ghost" href="rulebook.html#${event.id}">View Rules</a>
-        </div>
-      `;
-      eventsGrid.appendChild(card);
-    });
+  filtered.forEach((category) => {
+    const card = document.createElement("article");
+    card.className = `event-card fade-in event-${category.id}`;
+    card.style.backgroundImage = `linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.20)), url('images/${category.bgImage}')`;
+    card.style.backgroundSize = 'cover';
+    card.style.backgroundPosition = 'center';
+    card.innerHTML = `
+      <div class="event-card-icon">${category.icon}</div>
+      <h3>${category.category}</h3>
+      <p>${category.description}</p>
+      <div class="card-actions">
+        <a class="btn primary" href="${category.registerLink}" target="_blank" rel="noopener">Register Now</a>
+        <a class="btn secondary" href="rulebook.html?event=${category.id}">View Rules</a>
+      </div>
+    `;
+    eventsGrid.appendChild(card);
   });
 
   observeAnimations();
@@ -206,23 +155,6 @@ const observeAnimations = () => {
   );
 
   items.forEach((item) => observer.observe(item));
-
-  // Observe featured event card for slide-in animation
-  const featuredCard = document.querySelector(".event-card-featured");
-  if (featuredCard) {
-    const cardObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            cardObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    cardObserver.observe(featuredCard);
-  }
 };
 
 const toggleMenu = () => {
@@ -304,10 +236,16 @@ if (themeToggle) {
 
 window.addEventListener("scroll", handleScroll);
 
-createFilters();
+console.log("=== CARVAAN EVENTS PAGE INITIALIZED ===");
+console.log("Events Grid Element:", eventsGrid);
+console.log("Filters Container:", filtersContainer);
+
+createBanner();
 renderEvents();
 observeAnimations();
 setActiveNav();
 initTheme();
 initAccordion();
 handleScroll();
+
+console.log("=== PAGE SETUP COMPLETE ===");

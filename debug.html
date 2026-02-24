@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <section class="events-list-section">
+      <div class="container">
+        <div class="filters" id="filters"></div>
+        <div class="events-grid" id="eventsGrid"></div>
+      </div>
+    </section>
+  </main>
+  
+  <script>
+    console.log("Script loaded");
+    console.log("Filters element:", document.getElementById("filters"));
+    console.log("Events grid element:", document.getElementById("eventsGrid"));
+    
+    // Test CSS variables
+    const styles = getComputedStyle(document.documentElement);
+    console.log("Primary color:", styles.getPropertyValue('--primary'));
+    
+    // Simple banner test
+    const filtersContainer = document.getElementById("filters");
+    if (filtersContainer) {
+      filtersContainer.innerHTML = `<div style="background: red; padding: 20px;">TEST BANNER</div>`;
+      console.log("Banner inserted");
+    }
+  </script>
+</body>
+</html>
