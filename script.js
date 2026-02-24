@@ -75,16 +75,11 @@ const createBanner = () => {
 
   filtersContainer.innerHTML = `
     <div class="kalasangam-wrapper">
-      <!-- Sponsor Logo -->
-      <div class="sponsor-logo-section">
-        <img src="images/jain_logo_black_outline.png" alt="Sponsor Logo" class="sponsor-logo">
-      </div>
-
       <!-- Main Kalasangam Section -->
       <div class="events-banner">
         <!-- Left: Kalasangam Logo/Image -->
         <div class="banner-image">
-          <img src="images/logo_kala.png" alt="Kalasangam 2025 Logo" class="banner-logo">
+          <img src="images/KalasangamLogo2.png" alt="Kalasangam 2025 Logo" class="banner-logo">
         </div>
 
         <!-- Right: Content -->

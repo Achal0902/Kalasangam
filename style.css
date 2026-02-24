@@ -724,7 +724,8 @@ button {
 
 /* Left Column - Image */
 .banner-image {
-  background: linear-gradient(135deg, #d4701d 0%, #8b4513 50%, #4a2511 100%);
+  background: #6A1B2E;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
