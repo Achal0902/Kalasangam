@@ -79,7 +79,7 @@ const createBanner = () => {
       <div class="events-banner">
         <!-- Left: Kalasangam Logo/Image -->
         <div class="banner-image">
-          <img src="images/KalasangamLogo2.png" alt="Kalasangam 2025 Logo" class="banner-logo">
+          <img src="images/kalasangam final.png" alt="Kalasangam 2026 Logo" class="banner-logo">
         </div>
 
         <!-- Right: Content -->
@@ -93,10 +93,10 @@ const createBanner = () => {
             <p class="poetry-line highlight">lives the true spirit of our culture.</p>
           </div>
 
-          <p class="banner-description-main">Government College of Engineering, Jalgaon humbly presents <span class="kalasangam-highlight">Kalasangam 2025</span> — not just a fest, but a heartfelt gathering of traditions, emotions, and artistic devotion.</p>
+          <p class="banner-description-main">Government College of Engineering, Jalgaon humbly presents <span class="kalasangam-highlight">Kalasangam 2026</span> — not just a fest, but a heartfelt gathering of traditions, emotions, and artistic devotion.</p>
 
           <div class="banner-event-info">
-            <p class="event-date">📅 March 28, 2025</p>
+            <p class="event-date">📅 March 24, 2026</p>
             <p class="event-venue">📍 Government College of Engineering, Jalgaon, Maharashtra</p>
           </div>
         </div>

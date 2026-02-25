@@ -724,8 +724,8 @@ button {
 
 /* Left Column - Image */
 .banner-image {
-  background: #6A1B2E;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #f0e6f6 0%, #e8dff5 50%, #dfd3f0 100%);
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1356,7 +1356,61 @@ button {
 }
 
 .page-hero {
-  padding: 4rem 0 2rem;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vh;
+}
+
+.page-hero .container {
+  max-width: 900px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.page-hero p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero-header-with-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-header-with-toggle > div:first-child {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .page-hero p {
+    font-size: 1rem;
+  }
+  
+  .page-hero {
+    min-height: 30vh;
+    padding: 3rem 0;
+  }
 }
 
 .rulebook {
