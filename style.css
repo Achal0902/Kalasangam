@@ -653,7 +653,7 @@ button {
 }
 
 .events-list-section {
-  padding: 2rem 0 5rem;
+  padding: 2rem 0 2rem;
   background-image: url('images/background.jpg');
   background-size: cover;
   background-position: center;
@@ -1745,7 +1745,7 @@ button {
 .footer-new {
   background: rgb(199, 203, 210);
   padding: 3rem 0 2rem;
-  margin-top: 4rem;
+  margin-top: 0;
   border-top: 2px solid rgba(212, 167, 106, 0.2);
 }
 
